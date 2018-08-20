@@ -1,0 +1,37 @@
+# NavController 를 용한 화면이동
+lifeCicle 은 [반갑다 Ionic p.134] 참고
+> ~.ts 생성자 (constructor) 에서 NavController를 입력받아서 사용한다.
+> - 예제코드
+> ~~~
+> export class NextPage {
+> constructor(public navCtrl: NavController, public navParams: NavParams) {
+>  }
+>
+>  goPrev() {
+>    this.navCtrl.pop();
+>  }
+> }
+> ~~~
+
+---
+# 1. push
+
+> 새로운 화면을 화면에 표현한다.
+> ~~~
+> navCtrl.push(페이지 모듈 이름);
+> ~~~
+
+---
+# 2. pop
+> 현재 화면을 제거하고, 이전 페이지로 복귀 한다.
+> - 메모리에서 삭제된다.
+> ~~~
+> navCtrl.pop();
+> ~~~
+
+---
+# 3. setRoot
+> 이전 페이지를 모두 메모리에서 삭제하고, 파라미터로 입력되는 페이지를 Root 페이지로 변환한다.
+> ~~~
+> navCtrl.setRoot(루트페이지 이름);
+> ~~~

@@ -1,0 +1,36 @@
+# Ionic 화면 구성하기
+> Ionic 은 오픈소스 프레임워크 이므로 지속적으로 컴포넌트 사용법이 달라지므로 정확한 사용법은 API를 확인하여 한다.
+> API Documents : [https://ionicframework.com/docs/components/](https://ionicframework.com/docs/components/)
+
+----
+
+# 1. App 실행 사이클
+> 1. App 실행
+> 2. app/app.html 렌더링
+> 3. app/app.component.ts 실행
+> 이곳에서 root 페이지 정보를 얻어 다시 화면을 랜더링 한다
+
+
+---
+
+# 2. 새로운 페이지 추가하기
+> 1. 페이지 탬플릿 생성
+> 2. app.module.ts 에 추가하기
+
+## 1. 페이지 탬플릿 생성
+> 다음과 같은 명령어로 페이지를 생성한다
+> ~~~
+> ionic g[또는 generate] page [페이지 이름]
+> ~~~
+
+## 2. app.module.ts 에 페이지 등록하기
+> 페이지 생성후 app.moule.ts 에 등록을 한다.
+> ~~~
+> 생략...
+> imports: [
+>   BrowserModule,
+>   IonicModule.forRoot(MyApp),
+>   NextPageModule      <- 추가
+> ],
+> 생략...
+> ~~~
